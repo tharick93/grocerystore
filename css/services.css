@@ -1,0 +1,192 @@
+/* Services Page */
+
+/* Services Hero — make larger, centered and responsive */
+.services-hero {
+  padding: 120px 0 80px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--gradient-hero);
+}
+
+.services-hero .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  margin-bottom: 12px;
+  color: white;
+}
+
+.services-hero p {
+  color: rgba(255,255,255,0.95);
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 28px;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity var(--transition);
+  z-index: 0;
+}
+
+.service-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(45, 159, 78, 0.25);
+  border-color: var(--primary);
+  color: white;
+}
+
+.service-card:hover * { color: white; position: relative; z-index: 1; }
+.service-card:hover .service-icon { transform: scale(1.2) rotate(10deg); }
+
+.service-icon {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  display: block;
+  transition: transform var(--transition);
+  animation: serviceBounce 3s ease infinite;
+}
+
+.service-card:nth-child(even) .service-icon { animation-delay: 0.5s; }
+
+@keyframes serviceBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.service-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.membership-section {
+  background: linear-gradient(180deg, transparent, rgba(45,159,78,0.06));
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.plan-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  text-align: center;
+  transition: all var(--transition);
+  position: relative;
+}
+
+.plan-card.featured {
+  border-color: var(--primary);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.plan-card.featured::before {
+  content: 'POPULAR';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient-accent);
+  color: white;
+  padding: 4px 16px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.plan-card:hover { transform: translateY(-8px); }
+.plan-card.featured:hover { transform: scale(1.05) translateY(-8px); }
+
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 16px 0;
+}
+
+.plan-price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+
+.plan-features {
+  text-align: left;
+  margin: 24px 0;
+}
+
+.plan-features li {
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.plan-features li::before { content: '✓ '; color: var(--primary); font-weight: 700; }
+
+.cta-banner {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 60px;
+  border-radius: var(--radius-xl);
+  text-align: center;
+}
+
+.cta-banner h2 {
+  color: white;
+  -webkit-text-fill-color: white;
+  margin-bottom: 24px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+@media (max-width: 1024px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .services-hero { padding: 80px 0 50px; }
+  .services-hero h1 { font-size: 2rem; }
+  .services-hero p { font-size: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .plans-grid { grid-template-columns: 1fr; }
+  .plan-card.featured { transform: none; }
+}
+
+@media (max-width: 480px) {
+  .services-grid { grid-template-columns: 1fr; }
+}

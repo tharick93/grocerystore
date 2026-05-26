@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard | FreshHarvest</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/employee.css">
+</head>
+<body class="dashboard-body">
+  <aside class="sidebar employee-sidebar" id="sidebar">
+    <div class="sidebar-logo">🚴 Delivery Portal</div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-section="overview">📋 Overview</a>
+      <a href="#" data-section="orders">📦 Assigned Orders</a>
+      <a href="#" data-section="tracking">📍 Delivery Tracking</a>
+      <a href="#" data-section="stock">📊 Stock Updates</a>
+      <a href="#" data-section="customers">👤 Customers</a>
+      <a href="index.html">🏠 Store</a>
+      <a href="#" id="empLogout">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu">☰</button>
+
+  <main class="dashboard-main">
+    <div class="dash-header">
+      <h1 id="empTitle">Employee Overview</h1>
+      <div class="dash-header-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <span id="empName">Employee</span>
+      </div>
+    </div>
+
+    <div class="dash-section active" id="section-overview">
+      <div class="dash-cards">
+        <div class="dash-card"><span class="card-icon">📦</span><div class="card-value" data-count="12" data-suffix="">0</div><div class="card-label">Assigned Today</div></div>
+        <div class="dash-card"><span class="card-icon">✅</span><div class="card-value" data-count="8" data-suffix="">0</div><div class="card-label">Completed</div></div>
+        <div class="dash-card"><span class="card-icon">🚴</span><div class="card-value" data-count="4" data-suffix="">0</div><div class="card-label">In Transit</div></div>
+        <div class="dash-card"><span class="card-icon">⭐</span><div class="card-value">4.9</div><div class="card-label">Rating</div></div>
+      </div>
+      <div class="task-cards" id="taskCards"></div>
+    </div>
+
+    <div class="dash-section" id="section-orders">
+      <div class="panel"><h2>Assigned Orders</h2><div id="assignedOrders"></div></div>
+    </div>
+
+    <div class="dash-section" id="section-tracking">
+      <div class="panel"><h2>Live Delivery Tracking</h2><div id="trackingList"></div></div>
+    </div>
+
+    <div class="dash-section" id="section-stock">
+      <div class="panel"><h2>Stock Updates</h2><div class="stock-grid" id="stockGrid"></div></div>
+    </div>
+
+    <div class="dash-section" id="section-customers">
+      <div class="panel"><h2>Customer Details</h2><div id="customerDetails"></div></div>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/employee.js"></script>
+</body>
+</html>

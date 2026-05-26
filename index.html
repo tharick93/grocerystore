@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FreshHarvest - Premium Online Grocery Delivery. Fresh fruits, vegetables & more delivered in minutes.">
+  <title>FreshHarvest | Premium Online Grocery Store</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <div class="page-loader">
+    <div class="loader-basket">🛒</div>
+    <p>Loading fresh groceries...</p>
+    <div class="loader-bar"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+     <img src="assets/stack logo.png" alt="img">
+        
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <a href="cart.html" class="cart-icon-btn" aria-label="Cart">🛒<span class="cart-badge" style="display:none">0</span></a>
+        <a href="login.html" class="btn btn-primary">Login</a>
+        <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- 1. Hero -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <h1>Fresh Groceries <span>Delivered</span> in Minutes</h1>
+          <p class="hero-subtitle">Shop premium organic produce, dairy, bakery & more. <span class="typing-text" id="typingText"></span></p>
+          <form class="hero-search" id="heroSearch">
+            <input type="search" placeholder="Search fruits, vegetables, dairy..." aria-label="Search products">
+            <button type="submit" class="btn btn-primary">Search</button>
+          </form>
+          <div class="hero-btns">
+            <a href="cart.html" class="btn btn-primary">Shop Now</a>
+            <a href="services.html" class="btn btn-outline">Our Services</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal-right">
+          <span class="float-item">🍎</span>
+          <span class="float-item">🥕</span>
+          <span class="float-item">🥦</span>
+          <span class="float-item">🍊</span>
+          <span class="float-item">🍇</span>
+          <span class="float-item">🥑</span>
+          <div class="hero-circle">🧺</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider-wrap container reveal">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-slide slide-1 active">
+          <div>
+            <h3>50% Off on Fruits</h3>
+            <p>Limited time seasonal offer — order now!</p>
+          </div>
+          <span class="slide-emoji">🍎</span>
+        </div>
+        <div class="hero-slide slide-2">
+          <div>
+            <h3>Free Delivery Above ₹499</h3>
+            <p>Express delivery in 10 minutes</p>
+          </div>
+          <span class="slide-emoji">🚴</span>
+        </div>
+        <div class="hero-slide slide-3">
+          <div>
+            <h3>100% Organic Certified</h3>
+            <p>Farm-fresh quality guaranteed</p>
+          </div>
+          <span class="slide-emoji">🌿</span>
+        </div>
+      </div>
+      <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- 2. Featured Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Categories</span>
+          <h2 class="section-title">Featured Categories</h2>
+          <p class="section-desc">Browse our wide range of fresh grocery categories</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid"></div>
+      </div>
+    </section>
+
+    <!-- 3. Popular Products -->
+    <section class="section" id="products">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Shop</span>
+          <h2 class="section-title">Popular Products</h2>
+          <p class="section-desc">Handpicked favorites loved by thousands of customers</p>
+        </div>
+        <div class="filter-bar reveal" id="filterBar">
+          <button class="filter-btn active" data-filter="all">All</button>
+        </div>
+        <div class="products-grid" id="popularProducts"></div>
+      </div>
+    </section>
+
+    <!-- 4. Seasonal Offers -->
+    <section class="section offers-section" id="offers">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Deals</span>
+          <h2 class="section-title">Seasonal Offers</h2>
+          <p class="section-desc">Don't miss these limited-time seasonal discounts</p>
+        </div>
+        <div class="grid-3">
+          <div class="offer-card reveal">
+            <span class="offer-emoji">🍂</span>
+            <div>
+              <span class="offer-badge">Autumn Sale</span>
+              <h3>30% Off Vegetables</h3>
+              <p>Fresh seasonal veggies at unbeatable prices</p>
+              <div class="countdown" id="countdown1"></div>
+            </div>
+          </div>
+          <div class="offer-card reveal">
+            <span class="offer-emoji">🎃</span>
+            <div>
+              <span class="offer-badge">Festival Special</span>
+              <h3>Buy 2 Get 1 Free</h3>
+              <p>On all bakery & snack items</p>
+              <div class="countdown" id="countdown2"></div>
+            </div>
+          </div>
+          <div class="offer-card reveal">
+            <span class="offer-emoji">❄️</span>
+            <div>
+              <span class="offer-badge">Winter Warmers</span>
+              <h3>Flat ₹100 Off</h3>
+              <p>On orders above ₹799</p>
+              <div class="countdown" id="countdown3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Best Sellers -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Trending</span>
+          <h2 class="section-title">Best Sellers</h2>
+          <p class="section-desc">Top-rated products flying off our shelves</p>
+        </div>
+        <div class="products-grid" id="bestSellers"></div>
+      </div>
+    </section>
+
+    <!-- 6. Why Choose Us -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Why Us</span>
+          <h2 class="section-title">Why Choose FreshHarvest</h2>
+          <p class="section-desc">We're redefining grocery delivery with quality & speed</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-icon">⚡</div>
+            <h3>10-Min Delivery</h3>
+            <p>Lightning-fast delivery to your doorstep</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">🌿</div>
+            <h3>100% Fresh</h3>
+            <p>Farm-sourced produce delivered same day</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">💰</div>
+            <h3>Best Prices</h3>
+            <p>Competitive pricing with daily deals</p>
+          </div>
+          <div class="why-card reveal">
+            <div class="why-icon">🔒</div>
+            <h3>Secure Payment</h3>
+            <p>Safe & encrypted checkout process</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Delivery Process -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Delivery Process</h2>
+          <p class="section-desc">From cart to doorstep in four simple steps</p>
+        </div>
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="step-num">1</div>
+            <h3>Browse & Add</h3>
+            <p>Select fresh items from our catalog</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">2</div>
+            <h3>Checkout</h3>
+            <p>Secure payment with multiple options</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">3</div>
+            <h3>We Pack</h3>
+            <p>Carefully packed by our expert team</p>
+          </div>
+          <div class="process-step reveal">
+            <div class="step-num">4</div>
+            <h3>Delivered!</h3>
+            <p>Fresh groceries at your door in minutes</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Organic Fresh -->
+    <section class="section organic-section">
+      <div class="container organic-grid">
+        <div class="reveal-left">
+          <span class="section-tag">Organic</span>
+          <h2 class="section-title">Organic Fresh Products</h2>
+          <p class="section-desc" style="margin:0 0 24px;text-align:left">Certified organic produce sourced directly from local farms. No pesticides, no preservatives — just pure natural goodness.</p>
+          <a href="services.html" class="btn btn-primary">Explore Organic</a>
+        </div>
+        <div class="organic-visual reveal-right">
+          <div class="organic-box">🥬</div>
+          <div class="organic-box">🍎</div>
+          <div class="organic-box">🥕</div>
+          <div class="organic-box">🍅</div>
+          <div class="organic-box large">🌱</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Discount Banner -->
+    <section class="section">
+      <div class="container reveal">
+        <div class="discount-banner">
+          <div>
+            <h2 class="glow-text">First Order? Get 40% OFF!</h2>
+            <p>Use code <strong>FRESH40</strong> at checkout. Valid for new users only.</p>
+          </div>
+          <a href="signup.html" class="btn btn-ghost" style="color:white;border-color:white">Claim Offer</a>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- 10. Testimonials -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Reviews</span>
+          <h2 class="section-title">Customer Testimonials</h2>
+          <p class="section-desc">What our happy customers say about us</p>
+        </div>
+        <div class="testimonials-slider reveal">
+          <div class="testimonial-track" id="testimonialTrack"></div>
+          <div class="slider-dots" id="testimonialDots"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. App Promo -->
+    <section class="section">
+      <div class="container reveal">
+        <div class="app-promo">
+          <div>
+            <span class="section-tag">Mobile App</span>
+            <h2 class="section-title" style="text-align:left">Download Our App</h2>
+            <p style="color:var(--text-muted);margin:16px 0 0">Get exclusive app-only deals, track orders in real-time, and enjoy faster checkout.</p>
+            <div class="app-badges">
+              <a href="404.html" class="app-badge" target="_blank" rel="noreferrer noopener">📱 App Store</a>
+              <a href="404.html" class="app-badge" target="_blank" rel="noreferrer noopener">🤖 Play Store</a>
+            </div>
+          </div>
+          <div class="phone-mockup">
+            <div class="phone-screen">🛒<span style="font-size:1rem;color:var(--text)">FreshHarvest</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-list" id="faqList"></div>
+      </div>
+    </section>
+
+    <!-- 13. Newsletter -->
+    <section class="section">
+      <div class="container reveal">
+        <div class="newsletter-box">
+          <h2>Subscribe to Our Newsletter</h2>
+          <p>Get weekly deals, recipes & fresh produce updates</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Enter your email" required aria-label="Email">
+            <button type="submit" class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. Partner Brands -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Partners</span>
+          <h2 class="section-title">Partner Brands</h2>
+        </div>
+        <div class="partners-row reveal">
+          <span class="partner-logo">Amul</span>
+          <span class="partner-logo">Nestlé</span>
+          <span class="partner-logo">Britannia</span>
+          <span class="partner-logo">Tata</span>
+          <span class="partner-logo">ITC</span>
+          <span class="partner-logo">Haldiram's</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. Statistics -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <span class="stat-num" data-count="50000" data-suffix="+">0</span>
+            <p>Happy Customers</p>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num" data-count="10000" data-suffix="+">0</span>
+            <p>Products Listed</p>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num" data-count="25" data-suffix="">0</span>
+            <p>Cities Covered</p>
+          </div>
+          <div class="stat-item reveal">
+            <span class="stat-num" data-count="10" data-suffix=" min">0</span>
+            <p>Avg. Delivery Time</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">
+      <img src="assets/stack logo.png" alt="ss">
+          </a>
+          <p class="footer-desc">Premium online grocery delivery. Fresh, organic, and delivered to your door in minutes.Fresh groceries delivered to your doorstep with quality, speed, and care.
+Experience healthy shopping with us.
+</p>
+          <div class="footer-social">
+            <a href="404.html" aria-label="Facebook">📘</a>
+            <a href="404.html" aria-label="Instagram">📷</a>
+            <a href="404.html" aria-label="Twitter">🐦</a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="cart.html">Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="404.html">FAQ</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li>📞 +91 98765 43210</li>
+            <li>✉️ hello@freshharvest.com</li>
+            <li>📍 Mumbai, India</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 FreshHarvest. All rights reserved. Premium Grocery Delivery.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

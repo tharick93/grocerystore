@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | FreshHarvest</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body class="auth-page">
+    <a href="index.html" class="back-home" aria-label="Back to home">← Home</a>
+
+  <div class="auth-bg">
+    <span class="float-fruit">🍎</span>
+    <span class="float-fruit">🥕</span>
+    <span class="float-fruit">🥬</span>
+    <span class="float-fruit">🍊</span>
+    <span class="float-fruit">🍇</span>
+    <span class="float-fruit">🥑</span>
+  </div>
+
+  <button class="theme-toggle auth-theme" aria-label="Toggle theme">🌙</button>
+
+  <div class="auth-container">
+    <a href="index.html" class="auth-logo">🌿 FreshHarvest</a>
+
+    <div class="login-card glass-card reveal">
+      <h1>Welcome Back</h1>
+      <p class="auth-subtitle">Login to your FreshHarvest account</p>
+
+      <div class="role-tabs">
+        <button class="role-tab active" data-role="customer">Customer</button>
+        <button class="role-tab" data-role="admin">Admin</button>
+        <button class="role-tab" data-role="employee">Employee</button>
+      </div>
+
+      <form id="loginForm" class="auth-form">
+        <div class="form-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" required placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" required placeholder="••••••••">
+        </div>
+        <div class="form-options">
+          <label class="remember"><input type="checkbox"> Remember me</label>
+          <a href="#" class="forgot-link" id="forgotLink">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Login</button>
+        <p class="demo-hint" id="demoHint">Demo: user@freshharvest.com / user123</p>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

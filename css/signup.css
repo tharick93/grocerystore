@@ -1,0 +1,18 @@
+/* Signup — extends login styles (login.css linked in HTML) */
+.signup-container { max-width: 480px; }
+
+.signup-card { padding: 36px 32px; }
+
+.terms {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  cursor: pointer;
+}
+
+.terms input { margin-top: 4px; }
+
+.signup-page .float-fruit { opacity: 0.15; }

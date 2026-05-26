@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | FreshHarvest</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="dashboard-body">
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">🌿 FreshHarvest Admin</div>
+    <nav class="sidebar-nav">
+      <a href="#" class="active" data-section="overview">📊 Dashboard</a>
+      <a href="#" data-section="products">📦 Products</a>
+      <a href="#" data-section="orders">🛒 Orders</a>
+      <a href="#" data-section="customers">👥 Customers</a>
+      <a href="#" data-section="analytics">📈 Analytics</a>
+      <a href="index.html">🏠 Store</a>
+      <a href="#" id="adminLogout">🚪 Logout</a>
+    </nav>
+  </aside>
+
+  <button class="sidebar-toggle" id="sidebarToggle" aria-label="Menu">☰</button>
+
+  <main class="dashboard-main">
+    <div class="dash-header">
+      <h1 id="dashTitle">Dashboard Overview</h1>
+      <div class="dash-header-actions">
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+        <span id="adminName">Admin</span>
+      </div>
+    </div>
+
+    <!-- Overview -->
+    <div class="dash-section active" id="section-overview">
+      <div class="dash-cards">
+        <div class="dash-card"><span class="card-icon">💰</span><div class="card-value" data-count="284500" data-suffix="">0</div><div class="card-label">Total Revenue (₹)</div></div>
+        <div class="dash-card"><span class="card-icon">🛒</span><div class="card-value" data-count="1247" data-suffix="">0</div><div class="card-label">Total Orders</div></div>
+        <div class="dash-card"><span class="card-icon">👥</span><div class="card-value" data-count="8934" data-suffix="">0</div><div class="card-label">Customers</div></div>
+        <div class="dash-card"><span class="card-icon">📦</span><div class="card-value" data-count="156" data-suffix="">0</div><div class="card-label">Products</div></div>
+      </div>
+      <div class="dash-grid-2">
+        <div class="panel">
+          <h2>Sales Analytics</h2>
+          <canvas id="salesChart" class="chart-canvas"></canvas>
+        </div>
+        <div class="panel">
+          <h2>Notifications</h2>
+          <div class="notifications-list" id="notificationsList"></div>
+        </div>
+      </div>
+      <div class="dash-grid-2">
+        <div class="panel">
+          <h2>Recent Orders</h2>
+          <table class="data-table"><thead><tr><th>ID</th><th>Items</th><th>Total</th><th>Status</th></tr></thead><tbody id="recentOrders"></tbody></table>
+        </div>
+        <div class="panel">
+          <h2>Recent Activity</h2>
+          <div class="activity-list" id="activityList"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div class="dash-section" id="section-products">
+      <div class="panel">
+        <h2>Product Management</h2>
+        <form class="product-form" id="productForm">
+          <input type="text" id="prodName" placeholder="Product name" required>
+          <input type="number" id="prodPrice" placeholder="Price (₹)" required min="1">
+          <select id="prodCategory">
+            <option value="fruits">Fruits</option>
+            <option value="vegetables">Vegetables</option>
+            <option value="dairy">Dairy</option>
+            <option value="bakery">Bakery</option>
+            <option value="beverages">Beverages</option>
+          </select>
+          <input type="text" id="prodEmoji" placeholder="Emoji (e.g. 🍎)" maxlength="4">
+          <button type="submit" class="btn btn-primary full">Add Product</button>
+        </form>
+        <div class="product-list-admin" id="adminProductList"></div>
+      </div>
+    </div>
+
+    <!-- Orders -->
+    <div class="dash-section" id="section-orders">
+      <div class="panel">
+        <h2>All Orders</h2>
+        <table class="data-table"><thead><tr><th>Order ID</th><th>Date</th><th>Items</th><th>Total</th><th>Status</th><th>Action</th></tr></thead><tbody id="allOrdersTable"></tbody></table>
+      </div>
+    </div>
+
+    <!-- Customers -->
+    <div class="dash-section" id="section-customers">
+      <div class="panel">
+        <h2>Customer List</h2>
+        <div class="customer-list" id="customerList"></div>
+      </div>
+    </div>
+
+    <!-- Analytics -->
+    <div class="dash-section" id="section-analytics">
+      <div class="panel">
+        <h2>Revenue Analytics</h2>
+        <canvas id="revenueChart" class="chart-canvas"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
