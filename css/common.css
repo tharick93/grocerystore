@@ -726,21 +726,22 @@ main {
   .hamburger { display: flex; }
   .nav-links {
     position: fixed;
-    top: 0;
+    top: var(--nav-height);
     right: -100%;
     width: 280px;
-    height: 100vh;
+    height: calc(100vh - var(--nav-height));
     background: var(--bg-card);
     flex-direction: column;
-    padding: 100px 32px 32px;
+    padding: 24px 32px 32px;
     box-shadow: -10px 0 40px rgba(0,0,0,0.15);
     transition: right var(--transition);
     align-items: flex-start;
-    gap: 4px;
+    gap: 8px;
     z-index: 999;
+    overflow-y: auto;
   }
   .nav-links.open { right: 0; }
-  .nav-links a { width: 100%; padding: 14px 16px; }
+  .nav-links a { width: 100%; padding: 14px 16px; font-size: 0.95rem; }
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
 }

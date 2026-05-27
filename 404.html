@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 - Page Not Found</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:linear-gradient(135deg,#0f172a,#14532d,#052e16);
+      overflow:hidden;
+      color:white;
+    }
+
+    .container{
+      text-align:center;
+      padding:40px;
+      width:90%;
+      max-width:600px;
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.15);
+      border-radius:25px;
+      backdrop-filter:blur(10px);
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+      animation:fadeIn 1s ease;
+    }
+
+    .error-code{
+      font-size:120px;
+      font-weight:800;
+      color:#4ade80;
+      text-shadow:0 0 20px rgba(74,222,128,0.7);
+      line-height:1;
+    }
+
+    h1{
+      margin-top:10px;
+      font-size:36px;
+    }
+
+    p{
+      margin-top:15px;
+      color:#d1d5db;
+      line-height:1.6;
+      font-size:16px;
+    }
+
+    .btn-group{
+      margin-top:35px;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:14px 28px;
+      border-radius:12px;
+      font-weight:600;
+      transition:0.3s ease;
+      display:inline-block;
+    }
+
+    .home-btn{
+      background:#22c55e;
+      color:white;
+      box-shadow:0 5px 15px rgba(34,197,94,0.4);
+    }
+
+    .home-btn:hover{
+      background:#16a34a;
+      transform:translateY(-3px);
+    }
+
+    .back-btn{
+      background:transparent;
+      border:2px solid white;
+      color:white;
+    }
+
+    .back-btn:hover{
+      background:white;
+      color:#111827;
+      transform:translateY(-3px);
+    }
+
+    .floating{
+      position:absolute;
+      width:120px;
+      opacity:0.08;
+      animation:float 6s ease-in-out infinite;
+    }
+
+    .leaf1{
+      top:10%;
+      left:5%;
+    }
+
+    .leaf2{
+      bottom:10%;
+      right:5%;
+      animation-delay:2s;
+    }
+
+    @keyframes float{
+      0%,100%{
+        transform:translateY(0px);
+      }
+      50%{
+        transform:translateY(-20px);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:600px){
+      .error-code{
+        font-size:90px;
+      }
+
+      h1{
+        font-size:28px;
+      }
+
+      p{
+        font-size:14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Decorative Images -->
+  <img src="https://cdn-icons-png.flaticon.com/512/765/765547.png" class="floating leaf1" alt="leaf">
+  <img src="https://cdn-icons-png.flaticon.com/512/765/765547.png" class="floating leaf2" alt="leaf">
+
+  <div class="container">
+    <div class="error-code">404</div>
+
+    <h1>Oops! Page Not Found</h1>
+
+    <p>
+      The page you are looking for might have been removed,
+      renamed, or temporarily unavailable in our grocery store.
+    </p>
+
+    <div class="btn-group">
+      <a href="index.html" class="btn home-btn">🏠 Go Home</a>
+
+      <a href="javascript:history.back()" class="btn back-btn">
+        ⬅ Go Back
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

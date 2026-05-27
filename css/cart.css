@@ -208,3 +208,15 @@
   .checkout-grid { grid-template-columns: 1fr; }
   .checkout-grid .full { grid-column: span 1; }
 }
+
+@media (max-width: 480px) {
+  .cart-layout { grid-template-columns: 1fr; }
+  .order-summary { position: static; padding: 20px; }
+  .cart-item { flex-direction: column; gap: 16px; }
+  .cart-item-emoji { width: 60px; height: 60px; }
+  .cart-item-info h3 { font-size: 1rem; }
+  .qty-controls { width: 100%; }
+  .checkout-grid { grid-template-columns: 1fr; gap: 12px; }
+  .checkout-form { padding: 24px; }
+  .btn-checkout { padding: 14px; font-size: 1rem; }
+}

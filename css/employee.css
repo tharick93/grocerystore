@@ -130,4 +130,15 @@
 
 @media (max-width: 768px) {
   .stock-grid { grid-template-columns: 1fr; }
+  .task-cards { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .task-cards { grid-template-columns: 1fr; }
+  .task-card { padding: 16px; }
+  .task-icon { font-size: 2rem; }
+  .task-progress-ring { width: 60px; height: 60px; }
+  .task-progress-ring span { font-size: 0.9rem; }
+  .stock-grid { grid-template-columns: 1fr; }
+  .stock-item { padding: 10px; }
 }

@@ -323,3 +323,15 @@
   .product-form { grid-template-columns: 1fr; }
   .product-form .full { grid-column: span 1; }
 }
+
+@media (max-width: 480px) {
+  .dashboard-main { padding: 12px; }
+  .dash-header { flex-direction: column; }
+  .dash-header h1 { font-size: 1.4rem; }
+  .dash-cards { grid-template-columns: 1fr; gap: 12px; }
+  .dash-card { padding: 16px; }
+  .dash-card .card-value { font-size: 1.5rem; }
+  .panel { padding: 16px; }
+  .data-table { font-size: 0.8rem; }
+  .data-table th, .data-table td { padding: 8px; }
+}

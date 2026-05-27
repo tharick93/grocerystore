@@ -199,6 +199,25 @@
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .auth-page { padding-top: 48px; }
+  .auth-container { max-width: 100%; padding: 16px; }
+  .login-card { padding: 28px 20px; }
+  .float-fruit { font-size: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .auth-container { max-width: 100%; padding: 12px; }
+  .login-card { padding: 20px 16px; }
+  .login-card h1 { font-size: 1.4rem; }
+  .auth-subtitle { font-size: 0.9rem; }
+  .role-tabs { gap: 4px; }
+  .role-tab { font-size: 0.75rem; padding: 8px 10px; }
+  .btn-full { padding: 12px; font-size: 0.9rem; }
+  .demo-hint { font-size: 0.75rem; margin-top: 12px; }
+  .back-home { font-size: 0.8rem; padding: 6px 10px; }
+}
+
 .shake {
   animation: shake 0.5s ease;
 }

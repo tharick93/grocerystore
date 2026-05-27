@@ -238,7 +238,24 @@
   .story-grid, .organic-about-grid { grid-template-columns: 1fr; }
 }
 
+@media (max-width: 768px) {
+  .page-hero { padding: 80px 0 50px; }
+  .page-hero h1 { font-size: 2rem; }
+  .story-visual { grid-template-columns: 1fr; }
+  .mission-card { padding: 28px; }
+  .team-avatar { width: 80px; height: 80px; font-size: 2.5rem; }
+  .organic-list li { padding: 8px 0; }
+}
+
 @media (max-width: 480px) {
   .team-grid, .quality-grid { grid-template-columns: 1fr; }
   .story-visual { grid-template-columns: 1fr; }
+  .page-hero { padding: 60px 0 40px; }
+  .page-hero h1 { font-size: 1.75rem; }
+  .hero-floats span { display: none; }
+  .mission-card { padding: 20px; }
+  .mission-icon { font-size: 2.5rem; }
+  .mission-card h2 { font-size: 1.25rem; }
+  .team-card { padding: 16px; }
+  .team-avatar { width: 70px; height: 70px; font-size: 2rem; }
 }
